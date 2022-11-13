@@ -217,6 +217,9 @@ button:active {
 }
 
 @media (max-width:950px) {
+    body {
+        gap: 2rem;
+    }
     main {
         width: auto;
         height: auto;
@@ -234,10 +237,7 @@ button:active {
 }
 
 @media (max-width:550px) {
-    body {
-        gap: 2rem;
-    }
-
+    
     main {
         padding: 1.5rem;
     }
@@ -252,6 +252,7 @@ button:active {
     .output {
         font-size: 2rem;
     }
+
 
     .percentage {
         grid-template-columns: 45% 45%;

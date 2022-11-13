@@ -101,18 +101,17 @@ resetBtn.addEventListener("click", function() {
 
 
 let r = document.querySelector(":root");
-
-let randomNum = Math.floor(Math.random() * 7)
+const clrs = [
+  ["#e8c547", "#30323D", "#4D5061"],
+  ["#26c0ab", "#c5e4e7", "#00494d"],
+  ["#38023B;", "#A288E3", "#BBD5ED"],
+  ["#FDFFFC;", "#235789", "#C1292E"],
+  ["#FDFFFC", "#235789", "#C1292E"],
+  ["#F7B2B7","#F7717D","#DE639A"],
+  ["#7C6A0A","#BABD8D","#662400"],
+  ["#006992","#EAF8BF", "#ECA400"]];
+let randomNum = Math.floor(Math.random() * clrs.length)
 function colorOnLoad() {
-  const clrs = [
-    ["#e8c547", "#30323D", "#4D5061"],
-    ["#26c0ab", "#c5e4e7", "#00494d"],
-    ["#38023B;", "#A288E3", "#BBD5ED"],
-    ["#FDFFFC;", "#235789", "#C1292E"],
-    ["#FDFFFC", "#235789", "#C1292E"],
-    ["#F7B2B7","#F7717D","#DE639A"],
-    ["#7C6A0A","#BABD8D","#662400"],
-    ["#006992","#EAF8BF", "#ECA400"]];
     r.style.setProperty("--Strong-cyan", clrs[randomNum][0]);
     r.style.setProperty("--Light-grayish-cyan", clrs[randomNum][1]);
     r.style.setProperty("--Very-dark-cyan", clrs[randomNum][2]);

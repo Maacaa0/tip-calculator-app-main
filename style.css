@@ -253,10 +253,6 @@ button:active {
         font-size: 2rem;
     }
 
-    input {
-        width: 80%;
-    }
-
     .percentage {
         grid-template-columns: 45% 45%;
     }

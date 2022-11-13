@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --Strong-cyan: #006992;
+    --Light-grayish-cyan: #EAF8BF;
+    --Very-dark-cyan: #ECA400;
+
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 5.4rem;
+
+    background: var(--Light-grayish-cyan);
+    font-family: "Space Mono", sans-serif;
+}
+
+main {
+    display: flex;
+    gap: 4rem;
+    background: var(--White);
+    border-radius: 1.5rem;
+    padding: 2.1rem;
+
+    width: 53.4rem;
+    height: 26rem;
+
+    -webkit-box-shadow: -1px 3px 23px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 23px -7px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 23px -7px rgba(0,0,0,0.75);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    margin-top: 1.1rem;
+}
+
+.left-text, label {
+    color: var(--Dark-grayish-cyan);
+}
+
+.percentage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .6rem;
+    margin-top: -1rem;
+}
+
+.people {
+    margin-top: 2.6rem;
+}
+
+
+.percentage-btn {
+    font-family: inherit;
+    font-size: 1.55rem;
+    padding: 0.4rem 1rem;
+    background: var(--Very-dark-cyan);
+    color: var(--White);
+    border-radius: .3rem;
+    border: none;
+    outline: none;
+}
+
+.custom-container {
+    position: relative;
+}
+
+#custom {
+    background: var(--Very-light-grayish-cyan);
+    color: var(--Grayish-cyan);
+}
+
+.custom-range {
+    position: absolute;
+    display: none;
+    left: -2rem;
+    top: 3rem;
+    cursor: pointer;
+}
+
+
+  
+.display {
+    display: block;
+}
+
+
+input {
+    font-family: inherit;
+    font-size: 1.6rem;
+    letter-spacing: -0.8px;
+    color: var(--Very-dark-cyan);
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    background: var(--Very-light-grayish-cyan)
+}
+
+input::placeholder {
+    color: var(--Grayish-cyan);
+}
+
+#bill-input {
+    background: var(--Very-light-grayish-cyan) url(images/icon-dollar.svg) 15px center no-repeat;
+}
+
+#people-input {
+    background: var(--Very-light-grayish-cyan) url(images/icon-person.svg) 15px center no-repeat;
+}
+
+
+/* HIDE ARROWS IN NUMBER INPUTS */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 7.5rem;
+    padding: 2.9rem 2.5rem 2.5rem 2.5rem;
+    background: var(--Very-dark-cyan);
+    border-radius: .9rem;
+
+    width: 20.8rem;
+    height: 20.7rem;
+}
+
+.top-bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.right-top, .right-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+.right-text {
+    color: var(--White);
+    margin: 0;
+}
+
+.output {
+    color: var(--Strong-cyan);
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: -0.8px;
+}
+
+.output::before {
+    content: "$";
+}
+
+small {
+    color: var(--Grayish-cyan);
+}
+
+button {
+    cursor: pointer;
+}
+
+.reset-btn {
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-family: inherit;
+    font-size: 1.4rem;
+    opacity: 1;
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: -1.1px;
+    cursor: pointer;
+}
+
+.reset-btn:disabled {
+    opacity: .2;
+    cursor: default;
+}
+
+
+
+button:active {
+    transform: scale(.97)
+}
+
+@media (max-width:950px) {
+    main {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .left {
+        margin: 0;
+    } 
+
+    .custom-range {
+        left: -2rem;
+        top: 4rem;
+    }
+}
+
+@media (max-width:550px) {
+    body {
+        gap: 2rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .right {
+        width: auto;
+        height: auto;
+        gap: 3.5rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .output {
+        font-size: 2rem;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .percentage {
+        grid-template-columns: 45% 45%;
+    }
+}

@@ -24,6 +24,10 @@ body {
     font-family: "Space Mono", sans-serif;
 }
 
+h1 {
+    display: none;
+}
+
 main {
     display: flex;
     gap: 4rem;

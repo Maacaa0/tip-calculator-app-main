@@ -20,7 +20,7 @@ resetBtn.disabled = true;
 
 function updateSum() {
   let tipAmount = (Number(billInput.value)/100) * percentage;
-  tip.textContent = tipAmount.toFixed(2) / numberOfPeople,
+  tip.textContent = (tipAmount / numberOfPeople).toFixed(2),
   total.textContent = ((Number(billInput.value) + tipAmount) / numberOfPeople).toFixed(2)
 
   tip.animate([

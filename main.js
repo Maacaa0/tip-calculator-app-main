@@ -104,7 +104,7 @@ let r = document.querySelector(":root");
 const clrs = [
   ["#e8c547", "#30323D", "#4D5061"],
   ["#26c0ab", "#c5e4e7", "#00494d"],
-  ["#38023B;", "#A288E3", "#BBD5ED"],
+  ["#38023B", "#A288E3", "#BBD5ED"],
   ["#D0D6B3", "#AAAE7F", "#143109"],
   ["#FDFFFC", "#235789", "#C1292E"],
   ["#F7B2B7","#F7717D","#DE639A"],
